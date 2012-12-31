@@ -9,12 +9,16 @@ Script to start/stop/restart/relaod uWSGI on Centos-5.
 
 - Copy/Paste or Download the file to "/etc/init.d/uwsgi"
 - Adapt the variables acording to you're setup:
+  ```Bash
   PROG=/usr/bin/uwsgi
   DESC=uWSGI
   DAEMON_OPTS="-x /etc/uwsgi/uwsgi.xml" 
+  ```
   
 - Change the permission to allow the file to execute:
+    ```Bash
     chmod +x /etc/init.d/uwsgi
+    ```
 
 
 Aditional Notes:
@@ -22,6 +26,7 @@ Aditional Notes:
 The script uses "/etc/uwsgi/uwsgi.xml" which should contain the config.
 
 Example:
+```XML
 <uwsgi>
         <uid>uwsgi</uid>
         <gid>uwsgi</gid>
@@ -34,6 +39,7 @@ Example:
         <enable-threads>true</enable-threads>
         <daemonize>/var/log/uwsgi.log</daemonize>
 </uwsgi>
+```
 
 Antoher file or config can be pointed by changing the "DAEMON_OPTS" var inside "uwsgi" init script!
 
