@@ -1,11 +1,7 @@
-centos5-uwsgi-init-script
+=========================
+Centos 5 uWSGI init.d script
 =========================
 
-
-Centos 5 uWSGI init.d script
-
-
-====
 Script to start/stop/restart/relaod uWSGI on Centos-5.
 
 
